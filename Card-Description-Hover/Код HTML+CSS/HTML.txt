@@ -1,0 +1,207 @@
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-6 col-lg-6">
+
+			<!-- begin c-card -->
+			<div class="c-card">
+				<div class="c-card__wrapper" style="background-image: url(img/img-1.jpg)">
+					<div class="c-card__header">
+					<!-- begin c-date -->
+						<div class="c-date">
+							<span class="c-date__day">24</span>
+							<span class="c-date__month">декабря</span>
+							<span class="c-date__year">2020</span>
+						</div>
+					<!-- end c-date -->
+					<!-- begin c-info -->
+						<ul class="c-info">
+							<li><a href="#" class="far fa-bookmark"></a></li>
+							<li><a href="#" class="far fa-heart"><span>24</span></a></li>
+							<li><a href="#" class="far fa-comment"><span>4</span></a></li>
+						</ul>
+					<!-- end c-info -->
+					</div>
+					<div class="c-card__body">
+						<div class="c-card__content">
+							<div class="c-card__author">Автор</div>
+							<h3 class="c-card__title">
+								<a href="#">Заголовок</a>
+							</h3>
+							<div class="c-card__desc">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, veritatis corrupti quas eius praesentium totam, impedit debitis molestias ullam ducimus velit recusandae neque hic magnam? Iure incidunt ad sequi impedit minus veniam, minima rem reiciendis fugit quisquam saepe maxime, accusantium repellat doloremque est veritatis ea amet nobis perspiciatis dignissimos omnis.
+							</div>
+							<button type="button" class="btn btn-outline-light float-right my-2">Подробнее</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end c-card -->
+
+		</div>
+		
+		<div class="col-md-6 col-lg-6">
+
+			<!-- begin c-card -->
+			<div class="c-card">
+				<div class="c-card__wrapper" style="background-image: url(img/img-2.jpg)">
+					<div class="c-card__header">
+
+					<!-- begin c-date -->
+						<div class="c-date">
+							<span class="c-date__day">24</span>
+							<span class="c-date__month">декабря</span>
+							<span class="c-date__year">2020</span>
+						</div>
+					<!-- end c-date -->
+
+					<!-- begin c-info -->
+						<ul class="c-info">
+							<li><a href="#" class="far fa-bookmark"></a></li>
+							<li><a href="#" class="far fa-heart"><span>24</span></a></li>
+							<li><a href="#" class="far fa-comment"><span>4</span></a></li>
+						</ul>
+					<!-- end c-info -->
+
+					</div>
+					<div class="c-card__body">
+						<div class="c-card__content">
+							<div class="c-card__author">Автор</div>
+							<h3 class="c-card__title">
+								<a href="#">Заголовок</a>
+							</h3>
+							<div class="c-card__desc">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum provident placeat repellat error explicabo tenetur ipsam et repellendus esse architecto. Nemo sint, perferendis laboriosam, at cum natus odit eos tempore sapiente modi esse aut fugit?
+							</div>
+							<a href="#" class="c-card__more">Подробнее</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- end c-card -->
+
+		</div>
+    </div>
+	
+	<div class="row">	
+		<div class="col-md-6 col-lg-4">
+
+			<!-- begin c-card -->
+			<div class="c-card">
+				<div class="c-card__wrapper" style="background-image: url(img/img-3.jpg)">
+					<div class="c-card__header">
+					<!-- begin c-date -->
+						<div class="c-date">
+							<span class="c-date__day">24</span>
+							<span class="c-date__month">декабря</span>
+							<span class="c-date__year">2020</span>
+						</div>
+					<!-- end c-date -->
+					<!-- begin c-info -->
+						<ul class="c-info">
+							<li><a href="#" class="far fa-bookmark"></a></li>
+							<li><a href="#" class="far fa-heart"><span>24</span></a></li>
+							<li><a href="#" class="far fa-comment"><span>4</span></a></li>
+						</ul>
+					<!-- end c-info -->
+					</div>
+					<div class="c-card__body">
+						<div class="c-card__content">
+							<div class="c-card__author">Автор</div>
+							<h3 class="c-card__title">
+								<a href="#">Заголовок</a>
+							</h3>
+							<div class="c-card__desc">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quis! Distinctio saepe voluptas possimus provident eligendi tenetur dolores magni expedita fuga consequatur nemo qui fugit eum, quisquam deleniti architecto aspernatur. Cupiditate exercitationem sit dolores repudiandae!
+							</div>
+							<a href="#" class="c-card__more">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end c-card -->
+
+		</div>		
+		
+		<div class="col-md-6 col-lg-4">
+
+			<!-- begin c-card -->
+			<div class="c-card">
+				<div class="c-card__wrapper" style="background-image: url(img/img-4.jpg)">
+					<div class="c-card__header">
+					<!-- begin c-date -->
+						<div class="c-date">
+							<span class="c-date__day">24</span>
+							<span class="c-date__month">декабря</span>
+							<span class="c-date__year">2020</span>
+						</div>
+					<!-- end c-date -->
+					<!-- begin c-info -->
+						<ul class="c-info">
+							<li><a href="#" class="far fa-bookmark"></a></li>
+							<li><a href="#" class="far fa-heart"><span>24</span></a></li>
+							<li><a href="#" class="far fa-comment"><span>4</span></a></li>
+						</ul>
+					<!-- end c-info -->
+					</div>
+					<div class="c-card__body">
+						<div class="c-card__content">
+							<div class="c-card__author">Автор</div>
+							<h3 class="c-card__title">
+								<a href="#">Заголовок</a>
+							</h3>
+							<div class="c-card__desc">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, unde ab libero praesentium aliquid eveniet. Quae laborum consectetur iure saepe earum, sapiente voluptatem reprehenderit repellendus praesentium, molestiae id possimus ab odit maiores ut rem at.
+							</div>
+							<button type="button" class="btn btn-outline-light float-right my-2">Подробнее</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end c-card -->
+
+		</div>		
+		
+		<div class="col-md-6 col-lg-4">
+
+			<!-- begin c-card -->
+			<div class="c-card">
+				<div class="c-card__wrapper" style="background-image: url(img/img-5.jpg)">
+					<div class="c-card__header">
+					<!-- begin c-date -->
+						<div class="c-date">
+							<span class="c-date__day">24</span>
+							<span class="c-date__month">декабря</span>
+							<span class="c-date__year">2020</span>
+						</div>
+					<!-- end c-date -->
+					<!-- begin c-info -->
+						<ul class="c-info">
+							<li><a href="#" class="far fa-bookmark"></a></li>
+							<li><a href="#" class="far fa-heart"><span>24</span></a></li>
+							<li><a href="#" class="far fa-comment"><span>4</span></a></li>
+						</ul>
+					<!-- end c-info -->
+					</div>
+					<div class="c-card__body">
+						<div class="c-card__content">
+							<div class="c-card__author">Автор</div>
+							<h3 class="c-card__title">
+								<a href="#">Заголовок</a>
+							</h3>
+							<div class="c-card__desc">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo laudantium numquam illum. Dolores, sit voluptatem ad mollitia, sed minima suscipit et fugit at delectus iusto eveniet? Eius totam ab sint suscipit nobis iure, quae error.
+							</div>
+							<a href="#" class="c-card__more">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end c-card -->
+
+		</div>	
+			
+		
+	</div>
+</div>

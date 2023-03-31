@@ -1,0 +1,2161 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8;" />
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="robots"      content="index, follow"/>
+	
+	<title>AppEvent</title>
+	<script>
+		var ENVIRONMENT = 'PRODUCTION';
+		var HOST       = 'https://appevent.ru';
+		var WIDGET_KEY = '23847eef48294a159594f048ded5338a';
+		var WIDGET_AUTH_KEY = 'appevent_widget710';
+		var MASTER_CLASS_BANNER = 'img/event_banners/b';
+		var MASTER_CLASS_LIST_IMAGE = 'img/event_list_image/b';
+		var EVENT_BANNERS_DUMMY = '';
+		var BLOCKED    = false;
+		var EXT_USER_ID = 0;
+		var dict = {
+			hall: {
+				one: "зал",
+				one2: "зал",
+				one3: "зале"
+			}
+		};
+		var START_FROM = {
+			hall_id: 986,
+			photosession_id: 0,
+			order_type: '',
+			date_start: '',
+			product_id: '',
+			render_checkout: '',
+			event_id: ''
+		};
+		var PARAMS = {"widget_key":"23847eef48294a159594f048ded5338a","hall_id":"986"};
+		var widget_start_url = '';
+		var roistat_visit    = '';
+		var config = {
+			work_time: {"from":{"minute":0,"hour":6},"to":{"minute":0,"hour":6}},
+			lang: 'ru',
+			company_embedded: '',
+		};
+	</script>
+	<style>
+		.main-loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11000;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0);
+	pointer-events: all;
+}
+.main-loader .main-loader_ae-spinner {
+	position: absolute;
+	top: 50%;
+	margin: -20px 0 0 0px;
+	width: 100%;
+}
+.main-loader_ae-spinner-bg {
+		background-color: rgba(255, 255, 255, 0.9);
+		/*background-color: rgba(74, 74, 74, 0.81);*/
+		width: 100px;
+		height: 100px;
+		border-radius: 100px;
+		position: absolute;
+		top: calc(50% - 50px);
+		left: calc(50% - 50px);
+}
+
+.main-loader_ae-spinner {
+	margin: 0px auto;
+	width: 50px;
+	height: 40px;
+	text-align: center;
+	font-size: 10px;
+}
+
+.main-loader_ae-spinner > div {
+	background-color: #FFCC00;
+	height: 100%;
+	width: 6px;
+	display: inline-block;
+	-webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+	animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.main-loader_ae-spinner .rect2 {
+	-webkit-animation-delay: -1.1s;
+	animation-delay: -1.1s;
+}
+
+.main-loader_ae-spinner .rect3 {
+	-webkit-animation-delay: -1.0s;
+	animation-delay: -1.0s;
+}
+
+.main-loader_ae-spinner .rect4 {
+	-webkit-animation-delay: -0.9s;
+	animation-delay: -0.9s;
+}
+
+.main-loader_ae-spinner .rect5 {
+	-webkit-animation-delay: -0.8s;
+	animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+	0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+	20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+	0%, 40%, 100% { 
+		transform: scaleY(0.4);
+		-webkit-transform: scaleY(0.4);
+	}  20% { 
+		transform: scaleY(1.0);
+		-webkit-transform: scaleY(1.0);
+	}
+}
+	</style>
+<script src="https://kit.fontawesome.com/becdfe0d3f.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/becdfe0d3f.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="ae-widget  ae-widget-site-embeded ae-widget-button widget-withcoupon widget-withhall ae-widget-embeded  widget_photostudio   ">
+
+	<div class="main-loader">
+		<div class="main-loader_ae-spinner-bg"><div class="main-loader_ae-spinner">
+			<div class="rect1"></div>
+			<div class="rect2"></div>
+			<div class="rect3"></div>
+			<div class="rect4"></div>
+			<div class="rect5"></div>
+		</div></div>
+	</div>
+	<link rel="stylesheet" type="text/css" href="/packed/css/widget_v2-ddfed810c7457f6a0d15.css" />
+
+		<script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>
+	
+		<script type="text/javascript">
+			if (typeof VK !== 'undefined') {
+				VK.Retargeting.Init('VK-RTRG-10573-7dyV4');
+				
+					VK.Retargeting.Add(25127161);
+			}
+		</script>
+	<script type="text/javascript" src="/packed/widget_v2-ddfed810c7457f6a0d15.js" charset="utf-8"></script>
+
+	<div class="loader hide">
+		<div class="ae-spinner-bg"><div class="ae-spinner">
+			<div class="rect1"></div>
+			<div class="rect2"></div>
+			<div class="rect3"></div>
+			<div class="rect4"></div>
+			<div class="rect5"></div>
+		</div></div>
+	</div>
+
+	<div class="ae-widget__container clearfix">
+		<button type="button" class="close global_close"><span><i class="icon icon-close-empty-big"></i></span></button>
+
+		<div class="ae-widget__content ae-widget__content-load">
+			<div class="ae-widget__body clearfix">
+			</div>
+		</div>
+		<div class="ae-widget__content ae-widget__content-blocked hide">
+			<div class="ae-widget__body clearfix">
+				<div class="ae-widget__blocked-container">
+					Виджет заблокирован
+				</div>
+			</div>
+		</div>
+
+		<div class="ae-widget__block-content">
+					
+<div class="ae-widget__content ae-widget__content-day hide">
+	<div class="ae-widget__header clearfix">
+		<button type="button" class="close"><span><i class="icon icon-close-empty-big"></i></span></button>
+		<h3>Выберите свободную дату</h3>
+		<div class="branch-container hide"></div>
+	</div>
+	<div class="ae-widget__body clearfix">
+		<div class="ae-widget__profile">
+				<div class="ae-widget__profile-container justify-content-center">
+					<div class="avatar"><img src="/img/company_avatar/b/710.png?1536407364" onerror="this.src='/img/dummy_avatar.png'"/></div>
+					<div class="ae-widget__profile-nameblock">
+						<div class="ae-widget__profile-role">ФОТО, ВИДЕО СТУДИЯ</div>
+						<div class="ae-widget__profile-name ae-widget__data-company-name">SNYATO.KZ</div>
+					</div>
+				</div>
+
+					<div class="ae-widget__profile-what">Выберите день для фотосессии<br/>и забронируйте зал</div>
+		</div>
+		<div class="ae-widget__calendar">
+			<div class="ae-calendar__control">
+				<div class="ae-calendar__switch clearfix">
+					<div class="ae-calendar__switch-title"></div>
+					<div class="btn-group ml-5">
+						<div class="ae-calendar__switch-prev btn btn-icon"><i class="icon icon-arrow-left-big"></i></div>
+						<div class="ae-calendar__switch-next btn btn-icon"><i class="icon icon-arrow-right-big"></i></div>
+					</div>
+				</div>
+			</div>
+			<div class="ae-calendar"></div>
+		</div>
+	</div>
+	<div class="ae-widget__actions clearfix">
+		<div class="btn btn-lg btn-default pull-left-sm ae-widget__back">Назад</div>
+
+				<div class="ae-widget__legend legend clearfix">
+					<div class="legend__item legend__item_partbusy item "><div class="item__color"></div><div class="item__title">Остались свободные залы</div></div>
+					<div class="legend__item legend__item_busy     item "><div class="item__color"></div><div class="item__title">Все залы заняты</div></div>
+				</div>
+	</div>
+</div>
+
+	<div class="ae-widget__content ae-widget__content-hall hide">
+		<div class="ae-widget__header clearfix">
+			<button type="button" class="close"><span><i class="icon icon-close-empty-big"></i></span></button>
+				<h3>Выберите <br/>свободный зал</h3>
+			<div class="branch-container hide"></div>
+		</div>
+		<div class="ae-widget__body clearfix">
+			<div class="widget__halls clearfix"></div>
+		</div>
+		<div class="ae-widget__actions clearfix">
+			<div class="btn btn-lg btn-default pull-left ae-widget__back">Назад</div>
+			<div class="btn btn-lg pull-right ae-widget__next">Далее</div>
+		</div>
+	</div>
+
+<div class="ae-widget__content ae-widget__content-time hide">
+	<div class="ae-widget__header clearfix">
+		<button type="button" class="close"><span><i class="icon icon-close-empty-big"></i></span></button>
+		<h3>Выберите <br/>свободное время</h3>
+		<div class="ae-widget__datetime">
+			<div class="ae-widget__date">
+				<span class="ae-widget__current-date"></span><span class="ae-widget__current-time"></span>
+			</div>
+			<div class="button-group freetimes_plus-minus_buttons">
+				<div class="btn btn-default btn-sm btn-freetimes freetimes_minus"><span>-</span></div>
+				<div class="ae-widget__duration"><span class="ae-widget__duration-data"></span></div> 
+				<div class="btn btn-default btn-sm btn-freetimes freetimes_plus"><span>+</span></div>
+			</div>
+		</div>
+		<div class="branch-container hide"></div>
+	</div>
+	<div class="ae-widget__body clearfix">
+		<div class="plan__freetimes">
+			<div class="freetimes">
+			</div>
+		</div>
+	</div>
+	<div class="ae-widget__actions clearfix">
+		<div class="ae-widget__price-block">
+			<div class="ae-widget__price"></div>
+			включая скидку <span class="ae-widget__price-discount"></span>
+		</div>
+		<div class="btn btn-lg btn-default pull-left ae-widget__back">Назад</div>
+		<div class="ae-widget__error"><i class="icon icon-warning-alt"></i> <span></span></div>
+		<div class="btn btn-lg btn-disabled pull-right ae-widget__next">Далее</div>
+	</div>
+</div>
+
+<div class="ae-widget__content ae-widget__content-type hide">
+	<div class="ae-widget__header clearfix">
+		<button type="button" class="close"><span><i class="icon icon-close-empty-big"></i></span></button>
+		<h3>Какое у вас <br/>мероприятие?</h3>
+		<div class="branch-container hide"></div>
+	</div>
+	<div class="ae-widget__body clearfix">
+		<div class="widget__types">
+				<div class="widget__type" id="12">Праздник</div>
+		</div>
+	</div>
+	<div class="ae-widget__actions clearfix">
+		<div class="btn btn-lg btn-default pull-left ae-widget__back">Назад</div>
+		<div class="btn btn-lg btn-disabled pull-right ae-widget__next">Далее</div>
+	</div>
+</div>
+
+<div class="ae-widget__content ae-widget__content-network hide">
+	<div class="ae-widget__header clearfix">
+		<button type="button" class="close"><span><i class="icon icon-close-empty-big"></i></span></button>
+		<h3>Выберите филиал <br/> сети  ""</h3>
+	</div>
+	<div class="ae-widget__body clearfix">
+		<div class="ae-widget__branch-container">
+			<div class="ae-widget__branch-list"></div>
+		</div>
+	</div>
+
+	<div class="ae-widget__actions clearfix">
+		<div class="btn btn-lg btn-disabled pull-right ae-widget__next">Далее</div>
+	</div>
+</div>
+
+<div class="ae-widget__content ae-widget__content-ordertype hide">
+	<div class="ae-widget__header clearfix">
+		<button type="button" class="close"><span><i class="icon icon-close-empty-big"></i></span></button>
+		<h3>Для чего <br/>бронируете?</h3>
+		<div class="ae-widget__header-lk-sm hide">
+			<div class="ae-widget__header-lk-sm-content vertical-center__container"></div>
+		</div>
+		<div class="branch-container hide"></div>
+	</div>
+	<div class="ae-widget__header-lk-xs hide" style=""></div>
+	<div class="ae-widget__body clearfix">
+		<div class="ae-widget__profile">
+				<div class="ae-widget__profile-container justify-content-center">
+					<div class="avatar"><img src="/img/company_avatar/b/710.png?1536407364" onerror="this.src='/img/dummy_avatar.png'"/></div>
+					<div class="ae-widget__profile-nameblock">
+						<div class="ae-widget__profile-role">ФОТО, ВИДЕО СТУДИЯ</div>
+						<div class="ae-widget__profile-name ae-widget__data-company-name">SNYATO.KZ</div>
+					</div>
+				</div>
+		</div>
+
+		<div class="order__types">
+				<div class="order__type btn btn-filled btn-info d-inline-flex justify-content-center align-items-center" type="extra_store">
+					<i class="icon icon-ios-cart"></i>
+					Магазин<br/>
+				</div>
+				<div class="order__type btn btn-filled btn-info d-inline-flex justify-content-center align-items-center" type="extra_store_certificate">
+					<i class="icon icon-ios-cart"></i>
+					Сертификаты<br/>
+				</div>
+			<div class="order__type" type="lesson">
+				Групповые занятия<br/>
+			</div>
+			<div class="order__type" type="private">
+				Персональные занятия<br/>
+			</div>
+				<div class="order__type" type="">
+					Аренда для фото<br/>
+					<span class="text-muted">есть фотограф</span>
+				</div>
+			<div class="order__type" type="rentvideo">
+				Аренда для видео<br/>
+				<span class="text-muted">есть видеограф</span>
+			</div>
+			<div class="order__type" type="photoset">
+				Фотосессия<br/>
+				<span class="text-muted">нужен фотограф</span>
+			</div>
+			<div class="order__type" type="rentevent">
+				Под мероприятие<br/>
+				<span>или праздник</span>
+			</div>
+			<div class="order__type" type="rentseminar">
+				Под мастер-класс<br/>
+				<span>или семинар</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="ae-widget__actions clearfix">
+		<div class="btn btn-lg btn-default pull-left-sm ae-widget__back">Назад</div>
+		<div class="btn btn-lg btn-disabled pull-right ae-widget__next">Далее</div>
+	</div>
+</div>
+
+<div class="ae-widget__content ae-widget__content-photosession hide">
+	<div class="ae-widget__header clearfix">
+		<button type="button" class="close"><span><i class="icon icon-close-empty-big"></i></span></button>
+		<h3>Выберите пакет</h3>
+		<div class="branch-container hide"></div>
+	</div>
+	<div class="ae-widget__body clearfix">
+		<div class="photosessions">
+		</div>
+	</div>
+	<div class="ae-widget__actions clearfix">
+		<div class="btn btn-lg btn-default pull-left ae-widget__back">Назад</div>
+		<div class="btn btn-lg btn-disabled pull-right ae-widget__next">Далее</div>
+	</div>
+</div>
+
+<div class="ae-widget__content ae-widget__content-confirm hide">
+	<div class="ae-widget__body clearfix">
+		<div class="ae-widget__header clearfix">
+			<h3>Подтвердите данные</h3>
+		</div>
+
+		<div class="ae-widget__info-left">
+			<div class="ae-widget__info-left-fixed">
+					<h4>ФОТО, ВИДЕО СТУДИЯ</h4>
+					<div class="ae-widget__data ae-widget__data-company-name ae-widget__data-company-name">SNYATO.KZ</div>
+
+				<h4 class="ae-widget__confirm-ordertype"></h4>
+				<div class="ae-widget__data"><span class="ae-widget__current-date"></span>&nbsp;<span class="ae-widget__current-time"></span><span class="ae-widget__current-hall"></span></div>
+					<div class="ae-widget__branch-data hide">
+						<h4 class="">ФИЛИАЛ</h4>
+						<div class="ae-widget__data">
+							<div class="ae-widget__data-name"></div>
+							<div class="ae-widget__data-address"></div>
+						</div>
+
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" id="guest_count" autocomplete="off" name="guest_count" placeholder="Сколько будет человек в зале?" value="">
+						<span class="help-block"></span>
+					</div>
+					<div class="form-group coupon_code__block">
+						<div class="input-group">
+							<input class="form-control" type="text" id="coupon_code" autocomplete="off" name="coupon_code" placeholder="Промокод/сертификат" value="">
+							<span class="input-group-btn input-group-btn_inside">
+								<div class="btn btn-info ae-widget__coupon-btn ae-widget__coupon-apply">Применить</div>
+							</span>
+						</div>
+						<span class="help-block"></span>
+					</div>
+			</div>
+			<div class="form-group ae-widget__comment">
+				<textarea class="form-control" autocomplete="off" name="description" placeholder="Комментарий"></textarea>
+				<span class="help-block"></span>
+			</div>
+		</div>
+
+		<div class="ae-widget__info-right">
+			<div class="ae-widget__form-block">
+					<div class="ae-widget__form-contact">
+						<h4 class="ae-widget__form-header text-muted">КАК С ВАМИ СВЯЗАТЬСЯ?</h4>
+
+						<div class="form-group">
+							<input class="form-control" type="text" id="client_fio" autocomplete="off" name="client_fio" placeholder="Фамилия Имя" value="">
+							<span class="help-block"></span>
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="text" id="client_email" autocomplete="off" name="client_email" placeholder="Email" value="">
+							<span class="help-block"></span>
+						</div>
+						<div class="form-group">
+							<input class="form-control pnumber_mask" type="text" id="client_pnumber" autocomplete="off" name="client_pnumber" placeholder="Телефон" value="">
+							<span class="help-block"></span>
+						</div>
+							<h4 class="ae-widget__form-header text-muted">ССЫЛКИ НА СОЦ. СЕТИ</h4>
+							<div class="form-group" style="position: relative;" data-widget-type="day">
+								<div id="social_link" name="social_link" class="form-control d-flex justify-content-between align-items-center clickable select-social dropdown">
+									<div class="social_icon valign-middle text-center dropdown__selected-social">
+										<button data-selected-social="vk.com/" id="dropbtn" class="dropdown__option dropdown__option-vkontakte" style="padding: 10px"></button>
+									</div>
+									<input class="social_link" name="client_social_input" type="text" placeholder="Введите ник или ID без @" autocomplete="off"/>
+									<div id="dropdownMenuButton">
+										<button class="dropdown-arrow dropdown-toggle" type="button" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<label class="icon-arrow-down" for="dropbtn"></label>
+										</button>
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<div class="clickable dropdown-item">
+												<button data-social="vk.com/" class="dropdown__option dropdown__option-vkontakte"></button>
+												<span>ВКонтакте</span>	
+											</div>
+											<div class="clickable dropdown-item">
+												<button data-social="instagram.com/" class="dropdown__option dropdown__option-instagram"></button>
+												<span>Instagram</span>	
+											</div>
+											<div class="clickable dropdown-item">
+												<button data-social="facebook.com/" class="dropdown__option dropdown__option-facebook"></button>
+												<span>Facebook</span>	
+											</div>
+										</div>
+									</div>
+								</div>
+								<span class="help-block"></span>
+							</div>
+					</div>
+				
+				<div class="checkout-total-info checkout-total-info_sm hide">
+					<div class="checkout-total-info__line checkout-total-info__origin-price">
+						<div>Стоимость</div>
+						<span class="checkout-total-info__price"></span>
+					</div>
+					<div class="checkout-total-info__line checkout-total-info__discount">
+						<div>Скидка</div>
+						<span class="checkout-total-info__price"></span>
+					</div>
+					<div class="checkout-total-info__line checkout-total-info__summary">
+						<div>Итого</div>
+						<span class="checkout-total-info__price"></span>
+					</div>
+					<div class="checkout-total-info__line checkout-total-info__prepay">
+						<div>Предоплата<br/><div class="checkout-total-info__prepay-duration">в течение <span class="checkout-total-info__prepay-duration-value"></span></div></div>
+						<span class="checkout-total-info__price"></span>
+					</div>
+					<div class="checkout-total-info__line checkout-total-info__cashback">
+						<div><input type="checkbox" id="use_cashback" autocomplete="off" name="use_cashback" value="1"/> Использовать Кэшбэк</div>
+						<span class="checkout-total-info__price"></span>
+					</div>
+				</div>
+
+				<div class="form-group rules_confirm__checkblock">
+					Нажимая на кнопку, вы соглашаетесь с 
+					 <a href="#" class="widget-show-rules" aepopup="policy">условиями</a>
+				</div>
+
+				<div class="form-group">
+					<span class="help-block" name="order_1"></span>
+				</div>
+
+				<div class="ae-widget__actions clearfix">
+					<div class="btn btn-lg btn-default pull-left ae-widget__back">Назад</div>
+					<div class="btn btn-lg btn-disabled pull-right ae-widget__next"></div>
+				</div>
+			</div>
+			<div class="ae-widget__form-auth clearfix">
+				<div class="mb-10">Для бронирования необходимо авторизоваться</div>
+				<div class="clearfix">
+					<div class="btn btn-block btn-filled btn-info mb-10 btn-lg ae-widget__form__signin">Войти</div>
+					<div class="btn btn-block btn-lg btn-default ae-widget__back">Назад</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="ae-widget__content ae-widget__content-extra-week hide">
+	<div class="ae-widget-extra__header">
+		<h2 class="ae-widget-extra__title">Дополнительные услуги</h2>
+		<div class="btn btn-lg btn-default ae-widget__back ae-widget-extra__back">Назад</div>
+	</div>
+	<div class="branch-container hide"></div>
+	<div>
+		<div class="ae-widget-extra__halls"></div>
+	</div>
+	<div class="ae-widget-extra__items-container"></div>
+	<div class="ae-widget__content-book clearfix">
+		<div class="ae-widget__content-book-wrapper ae-widget__content-book-wrapper_extra">
+			<div class="btn btn-default pull-left ae-widget__back ae-widget-extra__back">Назад</div>
+			<div class="ae-widget__price-block ae-widget__price-block_extra">
+				<div class="ae-widget__price"></div>
+				включая скидку <span class="ae-widget__price-discount"></span>
+			</div>
+			<div class="ae-widget-extra-book btn btn-lg btn-info btn-filled pull-right">Продолжить</div>
+		</div>
+	</div>
+</div>
+
+<div class="ae-widget__content ae-widget-master-class ae-widget__content-mc_main-week hide">
+	<div class="ae-widget-master-class__header">
+		Выбор мероприятия
+	</div>
+	<div class="ae-widget-master-class__wrapper">
+		<div class="ae-widget-master-class__slider">
+			<div class="ae-widget__slider-wrapper">
+				<div class="ae-widget__slider-prev ae-widget__slider-action"><i class="icon icon-arrow-left-big"></i></div>
+				<div class="ae-widget__slider-next ae-widget__slider-action"><i class="icon icon-arrow-right-big"></i></div>
+				<div class="ae-widget__slider"></div>
+			</div>
+		</div>
+		<div class="ae-widget-master-class__filter">
+			<div class="ui-block clearfix">
+				<div class="ui-block__actions clearfix">
+					<div class="btn-group pull-left" data-toggle="buttons">
+						<label class="btn btn-default filter-nearest">
+							<input type="radio" name="period" id="" autocomplete="off" value="nearest">Показать ближайшие
+						</label>
+						<div class="btn btn-default toggle-filter" type="button">
+							<div>
+								<span>
+									<i class="icon icon-filter" style="margin: 0"></i>
+								</span>
+							</div>
+						</div>
+						<label class="btn btn-default hide">
+							<input type="radio" name="period" id="" autocomplete="off" value="today">Сегодня
+						</label>
+						<label class="btn btn-default hide">
+							<input type="radio" name="period" id="" autocomplete="off" value="week">Неделя
+						</label>
+						<label class="btn btn-default hide">
+							<input type="radio" name="period" id="" autocomplete="off" value="month">Месяц
+						</label>
+						<div class="filter__period-switch ml-15 pull-left">
+							<div class="btn-group">
+								<div class="filter__period-switch-prev btn btn-default btn-icon" data-direction="prev"><i class="icon icon-arrow-left-big"></i></div>
+								<div class="filter__period-switch-next btn btn-default btn-icon" data-direction="next"><i class="icon icon-arrow-right-big"></i></div>
+							</div>
+						</div>
+						<div class="pull-left ml-15">
+							<div class="dropdown">
+								<div data-toggle="dropdown" class="btn btn-default filter__date-range"><i class="icon icon-date-range"></i> <span></span></div>
+								<div class="dropdown-menu dropdown-menu_center filter__date-range__dropdown">
+									<div class="arrow"></div>
+									<label>Период</label>
+									<form>
+										<div class="ae-widget-master-class__datepicker-wrapper">
+											<div class="form-group">
+												<input class="form-control datepicker" type="text" id="date_from" autocomplete="off" name="date_from" placeholder="" value="">
+											</div>
+											<div class="form-group">
+												<input class="form-control datepicker" type="text" id="date_to" autocomplete="off" name="date_to" placeholder="" value="">
+											</div>
+										</div>
+										<button type="submit" class="mt-10 btn-block btn btn-info">Применить</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ae-widget-master-class__cards"></div>
+		<div class="hide event-master-class">
+			<div class="event-master-class-empty-block empty__block-txt">
+				Мероприятий не запланировано
+			</div>
+		</div>
+	</div>
+	<div style="display: block;" class="ae-widget__footer clearfix">
+		<span class="pull-left">Работает на технологии <a href="https://appevent.ru/?utm_source=widget&amp;utm_medium=widget&amp;utm_campaign=widget_footer" target="_blank">www.appevent.ru</a></span>
+		<span class="pull-right">© 2023 AppEvent</span>
+	</div>
+</div>
+
+<div class="ae-widget__content ae-widget-mc-cart ae-widget__content-mc_cart-week hide">
+	<div class="ae-widget-mc-cart__banner ae-widget-mc-cart-banner">
+		<div class="ae-widget-mc-cart-banner__text-contet">
+			<div class="ae-widget-mc-cart-banner__title"></div>
+			<div class="ae-widget-mc-cart-banner__descr">
+				<span id="label"></span>
+				<div class="ae-widget-circle"></div>
+				<span id="time"></span>
+			</div>
+			<div class="ae-widget-mc-cart-banner__price"></div>
+		</div>
+	</div>
+	<div class="ae-widget-mc-cart-banner__action">
+		<a>
+			<div class="btn btn-lg btn-default btn-purchase-ticket mb-5">Купить билет</div>
+		</a>
+	</div>
+	<div class="ae-widget-mc-cart__wrapper">
+		<div class="ae-widget-mc-cart__descr hide">
+			<div class="ae-widget-mc-cart__title">О мероприятии</div>
+			<div class="ae-widget-mc-cart__text"></div>
+		</div>
+		<div class="ae-widget-mc-cart__photo mt-15 hide ae-widget__content_ignore-padding">
+			<div class="ae-widget-mc-cart__photo-wrapper ae-widget-no-scrollbar"></div>
+		</div>
+		<div class="ae-widget-mc-cart__tickets mt-15" id="ae-widget-mc-cart__tickets">
+			<div class="ae-widget-mc-cart__title">Билеты</div>
+			<div class="ae-widget-products">
+				<div class="ae-widget-product">
+					<div class="ae-widget-product__name__title"></div>
+					<div class="ae-widget-product__price"></div>
+					<div data-id="1" class="ae-widget-counter ml-15 mr-15">
+						<div data-action="dec" class="ae-widget-counter__dec ae-widget-counter__action ae-widget-counter__action_clickable">−</div>
+						<input class="ae-widget-counter__qty ae-widget-counter__action" value="0"></input>
+						<div data-action="inc" class="ae-widget-counter__inc ae-widget-counter__action ae-widget-counter__action_clickable">+</div>
+					</div>
+					<div class="ae-widget-product__total"></div>
+				</div>
+			</div>
+		</div>
+		<div class="ae-widget-canvas-block mt-15">
+			<div class="ae-widget-canvas-block__title mb-15">Билеты</div>
+			<div class="ae-widget-mc-cart-change-place ae-widget__next">Выбрать места</div>
+			<div class="ae-widget-canvas-header">
+				<div class="ae-widget-canvas-header__day"></div>
+				<div class="ae-widget-canvas-header__date"></div>
+			</div>
+			<div class="ae-widget-canvas">
+				<div class="ae-widget-canvas__block-banner">
+					<div class="ae-widget-canvas__block-banner__icon"></div>
+					<div class="ae-widget-canvas__block-banner__title">Продажа билетов закрыта</div>
+					<div class="ae-widget-canvas__block-banner__desc">На это событие уже не попасть, но у нас есть много других интересных мероприятий.</div>
+					<div class="btn btn-info btn-filled ae-widget-canvas__block-banner__btn ae-widget__back">Вернуться к списку</div>
+				</div>
+				<div id="canvas-stage"></div>
+				<div class="ae-widget-canvas__bar"></div>
+				<div class="ae-widget-canvas-notification hide">За один заказ можно купить только 5 билетов</div>
+				<div class="ae-widget-canvas__zoom">
+					<div class="ae-widget-canvas__zoom__item ae-widget-canvas__zoom__item--next">+</div>
+					<div class="ae-widget-canvas__zoom__item ae-widget-canvas__zoom__item--prev">–</div>
+				</div>
+				<div class="ae-widget-canvas__footer hide">
+					<div class="ae-widget-canvas__footer__tickets"></div>
+					<div class="ae-widget-canvas__footer__value"></div>
+				</div>
+			</div>
+		</div>
+		<div class="mt-15 ae-widget-mc-cart__address">
+			<div class="ae-widget-mc-cart__title">Адрес</div>
+			<div class="ae-widget-mc-cart__text"></div>
+			<div class="mt-10 ae-widget-mc-cart__map"></div>
+		</div>
+		<div class="ae-widget-mc-cart__organizer mt-15 mb-15">
+			<div class="ae-widget-mc-cart__title">Организаторы</div>
+			<div class="ae-widget-mc-cart__text ae-widget-mc-cart__organizer-name"></div>
+			<div class="ae-widget-mc-cart__text ae-widget-mc-cart__organizer-email"></div>
+			<a href="tel:+7035894855" class="ae-widget-mc-cart__text ae-widget-mc-cart__text_blue ae-widget-mc-cart__organizer-phone"></a>
+		</div>
+	</div>
+	<div class="ae-widget__content-book ae-widget__content-book-mc clearfix">
+		<div class="ae-widget__content-book-wrapper justify-content-between">
+			<div class="btn btn-default pull-left ae-widget__back ae-widget__back">Назад</div>
+			<div class="btn btn-lg btn-info btn-filled pull-right ae-widget__next">Продолжить</div>
+		</div>
+	</div>
+</div>
+
+<div class="ae-widget-mobile-canvas hide">
+    <div class="ae-widget-mobile-canvas__header">
+        <div class="ae-widget-mobile-canvas__header__exit">
+            <i class="icon icon-arrow-left-big"></i>
+        </div>
+        <div class="ae-widget-mobile-canvas__header__date"></div>
+        <div class="ae-widget-mobile-canvas__header__time"></div>
+    </div>
+    <div class="ae-widget-mobile-canvas__legend"></div>
+    <div class="ae-widget-canvas-notification mobile hide">За один заказ можно купить только 5 билетов</div>
+    <div id="mobile-canvas-stage"></div>
+    <div class="ae-widget-canvas__block-banner">
+        <div class="ae-widget-canvas__block-banner__icon"></div>
+        <div class="ae-widget-canvas__block-banner__title">Продажа билетов закрыта</div>
+        <div class="ae-widget-canvas__block-banner__desc">На это событие уже не попасть, но у нас есть много других интересных мероприятий.</div>
+        <div class="btn btn-info btn-filled ae-widget-canvas__block-banner__btn">Вернуться к списку</div>
+    </div>
+    <div class="ae-widget-canvas__zoom">
+        <div class="ae-widget-canvas__zoom__item ae-widget-canvas__zoom__item--next">+</div>
+        <div class="ae-widget-canvas__zoom__item ae-widget-canvas__zoom__item--prev">–</div>
+    </div>
+    <div class="ae-widget-mobile-canvas__footer">
+        <div class="ae-widget-mobile-canvas__footer__amount"></div>
+        <div class="ae-widget-mobile-canvas__footer__basket"></div>
+        <div class="btn btn-lg btn-info btn-filled ae-widget-mobile-canvas__footer__next ae-widget__next">Продолжить</div>
+    </div>
+</div>
+
+
+<div class="ae-widget__content ae-widget__content-confirm-week hide">
+	<div class="align-items-center d-flex justify-content-between mt-10 mb-15 ae-widget__confirm-week__header">
+		<div class="d-flex align-items-center branch-checkout-week">
+			<h2 class="mb-0 mr-5 mt-0">Оформление заказа</h2>
+			<div class="btn btn-default ae-widget__backWeek">Назад</div>
+		</div>
+		<div class="branch-container-week"></div>
+	</div>
+
+	<div class="ae-widget__content-basket-ordertype">
+		<span>
+			Бронь
+		</span> фотостудии 
+		<span class="ae-widget__data-company-name ">SNYATO.KZ</span>
+	</div>
+	<div class="ae-widget__content-basket"></div>
+
+	<div class="clearfix">
+		<div class="ae-widget__price-block hide">
+			<div class="ae-widget__price"></div>
+			включая скидку <span class="ae-widget__price-discount"></span>
+		</div>
+	</div>
+
+	<div class="ae-widget__form-block">
+
+			<div class="ae-widget__form-contact">
+				<h4 class="ae-widget__form-header text-muted">КАК С ВАМИ СВЯЗАТЬСЯ?</h4>
+
+				<div class="row">
+					<div class="form-group col-xs-3">
+						<input class="form-control" type="text" id="client_fio" autocomplete="off" name="client_fio" placeholder="Фамилия Имя" value="">
+						<span class="help-block"></span>
+					</div>
+					<div class="form-group col-xs-3">
+						<input class="form-control" type="text" id="client_email" autocomplete="off" name="client_email" placeholder="Email" value="">
+						<span class="help-block"></span>
+					</div>
+					<div class="form-group col-xs-3">
+						<input class="form-control pnumber_mask" type="text" id="client_pnumber" autocomplete="off" name="client_pnumber" placeholder="Телефон" data-mask="+7(000)000-00-00" value="">
+						<span class="help-block"></span>
+					</div>
+						<div class="form-group col-xs-3" data-widget-type="week">
+							<h4 class="ae-widget__form-header social_header text-muted">ССЫЛКИ НА СОЦ. СЕТИ</h4>
+							<div name="social_link" id="social_link" class="form-control d-flex justify-content-between align-items-center clickable select-social dropdown">
+								<div class="social_icon valign-middle text-center dropdown__selected-social">
+									<button data-selected-social="vk.com/" id="dropbtn" class="dropdown__option dropdown__option-vkontakte" style="padding: 10px"></button>
+								</div>
+								<input class="social_link" name="client_social_input" type="text" placeholder="Введите ник или ID без @" autocomplete="off"/>
+								<div id="dropdownMenuButton">
+									<button class="dropdown-arrow dropdown-toggle" type="button" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<label class="icon-arrow-down" for="dropbtn"></label>
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<div class="clickable dropdown-item">
+											<button data-social="vk.com/" class="dropdown__option dropdown__option-vkontakte"></button>
+											<span>ВКонтакте</span>	
+										</div>
+										<div class="clickable dropdown-item">
+											<button data-social="instagram.com/" class="dropdown__option dropdown__option-instagram"></button>
+											<span>Instagram</span>	
+										</div>
+										<div class="clickable dropdown-item">
+											<button data-social="facebook.com/" class="dropdown__option dropdown__option-facebook"></button>
+											<span>Facebook</span>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<span class="help-block"></span>
+						</div>
+				</div>
+			</div>
+		<div class="form-group ae-widget__comment">
+			<textarea class="form-control" autocomplete="off" name="description" placeholder="Комментарий"></textarea>
+			<span class="help-block"></span>
+		</div>
+		
+			<div class="row coupon_code__block">
+				<div class="form-group col-sm-4 col-sm-offset-8 col-xs-12">
+					<div class="input-group">
+						<input class="form-control" type="text" id="coupon_code" autocomplete="off" name="coupon_code" placeholder="Промокод/сертификат" value="">
+						<span class="input-group-btn input-group-btn_inside">
+							<div class="btn btn-info ae-widget__coupon-btn ae-widget__coupon-apply">Применить</div>
+						</span>
+					</div>
+					<span class="help-block"></span>
+				</div>
+			</div>
+
+		<div class="clearfix">
+			<div class="checkout-total-info checkout-total-info_fixed hide">
+				<div class="checkout-total-info__line checkout-total-info__origin-price">
+					<div>Стоимость</div>
+					<span class="checkout-total-info__price"></span>
+				</div>
+				<div class="checkout-total-info__line checkout-total-info__discount">
+					<div>Скидка</div>
+					<span class="checkout-total-info__price"></span>
+				</div>
+				<div class="checkout-total-info__line checkout-total-info__summary">
+					<div>Итого</div>
+					<span class="checkout-total-info__price"></span>
+				</div>
+				<div class="checkout-total-info__line checkout-total-info__prepay">
+					<div>Предоплата<br/><div class="checkout-total-info__prepay-duration">в течение <span class="checkout-total-info__prepay-duration-value"></span></div></div>
+					<span class="checkout-total-info__price"></span>
+				</div>
+				<div class="checkout-total-info__line checkout-total-info__cashback">
+					<div><input type="checkbox" id="use_cashback" autocomplete="off" name="use_cashback" value="1"/> Использовать Кэшбэк</div>
+					<span class="checkout-total-info__price"></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group text-right rules_confirm__checkblock">
+			Нажимая на кнопку, вы соглашаетесь с 
+			<a href="#" class="widget-show-rules" aepopup="policy">условиями использования</a>
+			<span class="help-block"></span>
+		</div>
+
+		<div class="form-group text-right">
+			<span class="help-block" name="orders"></span>
+		</div>
+
+		<div class="mb-20 mt-15 text-left ui-alert ui-alert__danger hide">
+			<div class="ui-alert__icon"><i class="icon icon-warning-alt"></i></div>
+			<div class="ui-alert__desc">
+				<div class="ui-alert__h1">Для корректной оплаты отключите VPN-сервис!</div>
+			</div>
+		</div>
+		<div class="form-group d-flex justify-content-end">
+			<input type="text" name="modal_footer" id="modal_footer" class="form-control hide" />
+			<span class="help-block"></span>
+		</div>
+		<div class="clearfix mb-20">
+			<div class="btn btn-lg btn-disabled pull-right ae-widget__next ae-widget__nextWeek">Отправить заявку</div>
+			<div class="btn btn-lg pull-right ae-widget__backWeek" style="margin-right: 10px;">Отменить</div>
+		</div>
+	</div>
+	<div class="ae-widget__form-auth clearfix mb-20 mt-20">
+		<div class="mb-10 text-right">Для бронирования необходимо авторизоваться</div>
+		<div class="clearfix">
+			<div class="btn btn-filled btn-info btn-lg pull-right ae-widget__form__signin">Войти</div>
+			<div class="btn btn-lg pull-right ae-widget__backWeek" style="margin-right: 10px;">Отменить</div>
+		</div>
+	</div>
+</div>
+
+<div class="ae-widget__block-week hide">
+	<div class="ae-widget__header-week clearfix hide">
+		<div class="branch-container-week" style="width: 100%"></div>
+	</div>
+	<div class="ae-widget__content-profile clearfix">
+			<div class="avatar"><img src="/img/company_avatar/b/710.png?1536407364" onerror="this.src='/img/dummy_avatar.png'"/></div>
+			<div class="ae-widget__profile-nameblock">
+				<div class="ae-widget__profile-role">ФОТО, ВИДЕО СТУДИЯ</div>
+				<div class="ae-widget__profile-name ae-widget__data-company-name">SNYATO.KZ</div>
+				<span class="text-muted">
+						метро Алексеевская, 3-я Мытищинская 3с1, м. Калужская, ул. Бутлерова 17Б, БЦ &quot;ФРЕШ&quot;<br/>
+						+7 (903) 723-99-87<br/>
+					manager@bogdo.studio<br/>
+				</span>
+			</div>
+	</div>
+
+	<div class="ae-widget__content-ordertype-week hide">
+		<h2>Для чего бронируете?</h2>
+
+		<div class="order__types clearfix">
+				<div class="order__type btn btn-filled btn-info d-inline-flex justify-content-center align-items-center" type="extra_store">
+					<i class="icon icon-ios-cart"></i>
+					Магазин<br/>
+				</div>
+				<div class="order__type btn btn-filled btn-info d-inline-flex justify-content-center align-items-center" type="extra_store_certificate">
+					<i class="icon icon-ios-cart"></i>
+					Сертификаты<br/>
+				</div>
+			<div class="order__type" type="lesson">
+				Групповые занятия<br/>
+			</div>
+			<div class="order__type" type="private">
+				Персональные занятия<br/>
+			</div>
+				<div class="order__type" type="">
+					Аренда для фото<br/>
+					<span class="text-muted">есть фотограф</span>
+				</div>
+			<div class="order__type" type="rentvideo">
+				Аренда для видео<br/>
+				<span class="text-muted">есть видеограф</span>
+			</div>
+			<div class="order__type" type="photoset">
+				Фотосессия<br/>
+				<span class="text-muted">нужен фотограф</span>
+			</div>
+			<div class="order__type" type="rentevent">
+				Под мероприятие<br/>
+				<span>или праздник</span>
+			</div>
+			<div class="order__type" type="rentseminar">
+				Под мастер-класс<br/>
+				<span>или семинар</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="ae-widget__content ae-widget__content-photosession-week hide">
+		<h2>Выберите пакет</h2>
+
+		<div class="photosessions"></div>
+	</div>
+
+	<div class="ae-widget__content ae-widget__content-hall-week hide">
+			<h2>Выберите зал<div class="ae-widget__content-hall-week-help h__desc hide">Чтобы посмотреть другие залы, листайте вправо</div></h2>
+		<div class="widget__halls clearfix"></div>
+	</div>
+
+	<div class="ae-widget__content ae-widget__content-trainer-week hide">
+		<h2>Выберите тренера</h2>
+		<div class="widget__trainers clearfix"></div>
+	</div>
+
+	<div class="ae-widget__content ae-widget__content-time-week hide">
+		<h2 class="mb-10">Выберите свободное время</h2>
+		<div class="ae-widget__content-legend">
+			<div class="ae-widget__content-legend mr-10">
+				<div class="timetable__schedule-tick  timetable__schedule-tick_1 ae-widget__content-legend-item mr-5"></div>
+				<span>свободно</span>
+			</div>
+			<div class="ae-widget__content-legend">
+				<div class="timetable__schedule-tick  timetable__schedule-tick_blocked timetable__schedule-tick_2 ae-widget__content-legend-item mr-5"></div>
+				<span>занято</span>
+			</div>
+		</div>
+		<div class="timetable clearfix"></div>
+		<div class="ae-widget__content-book hide clearfix">
+			<div class="ae-widget__content-book-wrapper">
+				<div class="timetable__order-count-block hidden-xs pull-left">
+					Всего<br/>
+					<span class="timetable__order-count"></span>
+				</div>
+				<div class="timetable__order-count-block hidden-xs pull-left">
+					За один раз<br/>
+					не больше 5-ти заказов
+				</div>
+				<div class="ae-widget__error timetable__order__error pull-left"><i class="icon icon-warning-alt"></i><span></span></div>
+
+
+				<div class="ae-widget__price-block">
+					<div class="ae-widget__price"></div>
+					включая скидку <span class="ae-widget__price-discount"></span>
+				</div>
+				<div class="timetable__week-book btn btn-lg btn-info btn-filled pull-right">Забронировать</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ae-widget__content ae-widget__content-lesson-week hide ui-block__actions" style="overflow: initial;">
+		<h2>Выберите занятие для записи</h2>
+		<a href="#" data-show="false" class="timetable__week-show-next btn btn-default">Показать ближайшие</a>
+		<select name="lesson_id" class="chosen-select ae-widget__content-lesson-week__lessons hide" data-width="250px" data-placeholder="Выберите занятия"></select>
+		<div class="timetable timetable_xs_notime clearfix"></div>
+		<div class="timetable__week-next-lessons hide"></div>
+	</div>
+
+	<div class="ae-widget__content ae-widget__content-private_schedule-week hide">
+		<h2>Выберите свободное время</h2>
+		<div class="timetable timetable_xs_notime clearfix"></div>
+	</div>
+</div>
+
+					<div class="ae-widget__content ae-widget__content-paid ae-widget__content_fullheight  hide">
+	<button type="button" class="close global_close"><span><i class="icon icon-close-empty-big"></i></span></button>
+	<div class="ae-widget__body clearfix">
+		<div class="ae-widget__finish-txt">
+				<h2>Вы успешно забронировали студию!<span class="h-desc">Подробности заказа отправлены вам на почту.</span></h2>
+
+			<br/><div class="btn btn-filled btn-lg btn-info ae-widget__go-start">Сделать еще один заказ</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="ae-widget__content ae-widget__content-paid-week ae-widget__content_fullheight-week  hide">
+	<div class="ae-widget__finish-txt">
+			<h2>Вы успешно забронировали студию!<span class="h-desc">Подробности заказа отправлены вам на почту.</span></h2>
+
+		<br/><div class="btn btn-filled btn-lg btn-info ae-widget__go-start">Сделать еще один заказ</div>
+
+	</div>
+</div>
+
+<div class="ae-widget__content ae-widget__content-finish ae-widget__content_fullheight  hide">
+	<button type="button" class="close global_close"><span><i class="icon icon-close-empty-big"></i></span></button>
+	<div class="ae-widget__body clearfix">
+		<div class="ae-widget__finish-txt">
+				<h2>Ваша заявка №<span class="ae-widget__finish-id"></span> принята!</h2>
+				<span class="ae-widget__finish-total hide">Сумма заказа <span class="price_total"></span></span>
+				<span class="ae-widget__finish-prepay hide">
+					<span class="prepay_with_decline">
+						Необходимо внести предоплату <span class="price_prepay"></span>
+						<br/>в течение <span class="prepay_decline_duration"></span>!
+						<br/><strong>Иначе заказ будет отменен!</strong>
+					</span>
+					<span class="prepay_without_decline">
+						Необходимо внести предоплату <span class="price_prepay"></span>!
+					</span>
+				</span>
+				<br/>
+				<div class="ae-widget__finish-aboutlink ae-text-muted">Подробности заказа отправлены вам на почту.</div>
+				<span class="ae-widget__finish-aboutlink-pay ae-text-muted hide">Вы можете оплатить заказ по ссылке,<br/>отправленной вам на почту.</span>
+
+				<br/><br/><div class="btn btn-filled btn-lg btn-info ae-widget__go-start">Сделать еще один заказ</div>
+		</div>
+	</div>
+</div>
+
+<div class="ae-widget__content ae-widget__content-finish-week ae-widget__content_fullheight-week  hide">
+	<div class="ae-widget__finish-txt">
+			<h2>Ваша заявка принята!</h2>
+			<span class="ae-widget__finish-total hide">Сумма заказа <span class="price_total"></span></span>
+			<span class="ae-widget__finish-prepay hide">
+				<span class="prepay_with_decline">
+					Необходимо внести предоплату <span class="price_prepay"></span>
+					<br/>в течение <span class="prepay_decline_duration"></span>!
+					<br/><strong>Иначе заказ будет отменен!</strong>
+				</span>
+				<span class="prepay_without_decline">
+					Необходимо внести предоплату <span class="price_prepay"></span>!
+				</span>
+			</span>
+			<br/>
+			<div class="ae-widget__finish-aboutlink ae-text-muted">Подробности заказа отправлены вам на почту.</div>
+			<span class="ae-widget__finish-aboutlink-pay ae-text-muted hide">Вы можете оплатить заказ по ссылке,<br/>отправленной вам на почту.</span>
+
+			<br/><br/><div class="btn btn-filled btn-lg btn-info ae-widget__go-start">Сделать еще один заказ</div>
+
+	</div>
+</div>
+
+
+
+	<div class="ae-widget__content ae-widget__content-shop clearfix hide">
+		<div class="ae-widget__header ae-widget__header-shop clearfix">
+			<h3>Выберите филиал <br/> сети  ""</h3>
+		</div>
+		<div class="ae-widget__body clearfix">
+			<div class="ae-widget__branch-container">
+				<div class="ae-widget__branch-list"></div>
+			</div>
+		</div>
+		<div class="ae-widget__actions clearfix">
+			<div class="btn btn-lg pull-right ae-widget__next ae-widget__next-network btn-info btn-filled">Далее</div>
+		</div>
+	</div>
+
+			<div class="ae-widget__content ae-widget__content-paywait hide">
+				<div class="ae-widget__finish-txt">
+					<h2>&nbsp;</h2>
+				</div>
+			</div>
+
+			<div class="ae-widget__content ae-widget__content-paywait-week ae-widget__content_fullheight-week hide">
+				<div class="ae-widget__finish-txt">
+					<h2>&nbsp;</h2>
+				</div>
+			</div>
+
+			<div class="ae-widget__content ae-widget__content-payerror hide">
+				<div class="ae-widget__finish-txt">
+					<div>
+						<div class="d-inline-flex mb-20 text-left ui-alert ui-alert__danger">
+							<div class="ui-alert__icon"><i class="icon icon-warning-alt"></i></div>
+							<div class="ui-alert__desc">
+								<div class="ui-alert__h1">Произошла ошибка, попробуйте еще раз!</div>
+								<div class="ui-alert__h2 ae-widget__block-pay-failed__txt"></div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="mb-20 mt-15 text-left ui-alert ui-alert__danger">
+							<div class="ui-alert__icon"><i class="icon icon-warning-alt"></i></div>
+							<div class="ui-alert__desc">
+								<div class="ui-alert__h1">Для корректной оплаты отключите VPN-сервис!</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn btn-filled btn-lg btn-info btn-gopay">Оплатить заказ</div>
+				</div>
+			</div>
+			
+			<div class="ae-widget__content ae-widget__content-payerror-week ae-widget__content_fullheight-week hide">
+				<div class="ae-widget__finish-txt">
+					<div>
+						<div class="d-inline-flex mb-20 text-left ui-alert ui-alert__danger">
+							<div class="ui-alert__icon"><i class="icon icon-warning-alt"></i></div>
+							<div class="ui-alert__desc">
+								<div class="ui-alert__h1">Произошла ошибка, попробуйте еще раз!</div>
+								<div class="ui-alert__h2 ae-widget__block-pay-failed__txt"></div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="mb-20 mt-15 text-left ui-alert ui-alert__danger">
+							<div class="ui-alert__icon"><i class="icon icon-warning-alt"></i></div>
+							<div class="ui-alert__desc">
+								<div class="ui-alert__h1">Для корректной оплаты отключите VPN-сервис!</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn btn-filled btn-lg btn-info btn-gopay">Оплатить заказ</div>
+				</div>
+			</div>
+
+			<div class="ae-widget__content ae-widget__content-pnumber_confirm hide">
+				<div class="ae-widget__body clearfix">
+					<div class="ae-widget__header clearfix">
+						<h3>Подтвердите данные</h3>
+					</div>
+
+					<div class="ae-widget__pnumber-confirm-txt">
+						<div class="text-muted" style="margin-bottom: 10px;">
+							Введите код подтверждения<br/>отправленный на номер <span class="ae-widget__content-pnumber"></span>
+						</div>
+
+						<div class="col-sm-6 ae-widget__pnumber-confirm-block form-group">
+							<input class="form-control" type="text" id="confirm_code" autocomplete="off" name="confirm_code" placeholder="Код из SMS" value=""/>
+							<span class="help-block"></span>
+						</div>
+						<div class="ae-widget__pnumber-confirm-action ae-widget__pnumber-resend">ОТПРАВИТЬ ЕЩЕ РАЗ</div>
+						<div class="ae-widget__pnumber-blocked text-muted hide">Запросить код повторно можно через <span class="ae-widget__pnumber-blocked-timer">60</span> сек.</div>
+						<div class="ae-widget__pnumber-confirm-action ae-widget__back">ИЗМЕНИТЬ НОМЕР</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="ae-widget__content ae-widget__content-pnumber_confirm-week ae-widget__content_fullheight-week hide">
+				<div class="ae-widget__pnumber-confirm-txt">
+					<div class="text-muted" style="margin-bottom: 10px;">
+						Введите код подтверждения<br/>отправленный на номер <span class="ae-widget__content-pnumber"></span>
+					</div>
+
+					<div class="col-sm-6 ae-widget__pnumber-confirm-block form-group">
+						<input class="form-control" type="text" id="confirm_code" autocomplete="off" name="confirm_code" placeholder="Код из SMS" value=""/>
+						<span class="help-block"></span>
+					</div>
+					<div class="ae-widget__pnumber-confirm-action ae-widget__pnumber-resend">ОТПРАВИТЬ ЕЩЕ РАЗ</div>
+					<div class="ae-widget__pnumber-blocked text-muted hide">Запросить код повторно можно через <span class="ae-widget__pnumber-blocked-timer">60</span> сек.</div>
+					<div class="ae-widget__pnumber-confirm-action ae-widget__backWeek">ИЗМЕНИТЬ НОМЕР</div>
+				</div>
+			</div>
+
+			<div class="ae-widget__content ae-widget__content_fullheight ae-widget__content-paymethod hide">
+				<div class="ae-widget__body clearfix">
+					<div class="ae-widget__finish-txt">
+						<h2 class="prepay_with_decline">
+							Необходимо внести предоплату
+							<br/>в течение <span class="prepay_decline_duration"></span>!
+							<br/><strong>Иначе заказ будет отменен!</strong>
+						</h2>
+						<h2 class="prepay_without_decline">
+							Необходимо внести предоплату!
+						</h2>
+
+						<span class="ae-widget__finish-total hide">Сумма заказа <span class="price_total"></span></span>
+						<span class="ae-widget__finish-prepay hide">Предоплата <span class="price_prepay"></span></span>
+						<div>
+							<div class="mb-20 mt-15 text-left ui-alert ui-alert__danger">
+								<div class="ui-alert__icon"><i class="icon icon-warning-alt"></i></div>
+								<div class="ui-alert__desc">
+									<div class="ui-alert__h1">Для корректной оплаты отключите VPN-сервис!</div>
+								</div>
+							</div>
+						</div>
+						<div class="ae-widget__pay-wrapper">
+							<div class="ae-widget__pay-actions-wrapper">
+								<div class="btn btn-filled btn-lg btn-info btn-gopay">Оплатить сейчас</div>
+								<div data-fromview="photosession" class="apple-pay-button apple-pay-button_sm">
+									<span class="text">Оплатить с </span>
+									<span class="logo"></span>
+								</div>
+							</div>
+							<div class="ae-widget__pay-helpers-wrapper">
+								<div class="btn btn-lg btn-pay-cash">Оплатить позже</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="ae-widget__content ae-widget__content_fullheight-week ae-widget__content-paymethod-mc-week hide">
+				<div class="ae-widget__finish-txt">
+					<h2>Ваш заказ принят!</h2>
+					<span class="ae-widget__finish-total hide">Сумма заказа <span class="price_total"></span></span>
+					<span class="ae-widget__finish-prepay hide">
+						<span class="prepay_with_decline">
+							Необходимо внести предоплату <span class="price_prepay"></span>
+							<br/>в течение' <span class="prepay_decline_duration"></span>!
+							<br/><strong>Иначе заказ будет отменен!</strong>
+						</span>
+						<span class="prepay_without_decline">
+							Необходимо внести предоплату <span class="price_prepay"></span>!
+						</span>
+					</span>
+					<br/>
+
+					<div class="ae-widget__finish-aboutlink ae-text-muted">Подробности заказа отправлены вам на почту.</div>
+					<span class="ae-widget__finish-aboutlink-pay ae-text-muted hide">Вы можете оплатить заказ по ссылке,<br/>отправленной вам на почту.</span>
+
+					<br/><br/><div class="btn btn-filled btn-lg btn-info ae-widget__master-class__checkout-success__back">Сделать еще один заказ</div>
+				</div>
+			</div>
+			
+			<div class="ae-widget__content ae-widget__content_fullheight-week ae-widget__content-paymethod-week hide">
+				<div class="ae-widget__finish-txt">
+					<h2 class="prepay_with_decline">
+						Необходимо внести предоплату
+						<br/>в течение <span class="prepay_decline_duration"></span>!
+						<br/><strong>Иначе заказ будет отменен!</strong>
+					</h2>
+					<h2 class="prepay_without_decline">
+						Необходимо внести предоплату!
+					</h2>
+
+					<span class="ae-widget__finish-total hide">Сумма заказа <span class="price_total"></span></span>
+					<span class="ae-widget__finish-prepay hide">Предоплата <span class="price_prepay"></span></span>
+					<div>
+						<div class="mb-20 mt-15 text-left ui-alert ui-alert__danger">
+							<div class="ui-alert__icon"><i class="icon icon-warning-alt"></i></div>
+							<div class="ui-alert__desc">
+								<div class="ui-alert__h1">Для корректной оплаты отключите VPN-сервис!</div>
+							</div>
+						</div>
+					</div>
+					<div class="ae-widget__pay-wrapper">
+						<div class="ae-widget__pay-actions-wrapper">
+							<div class="btn btn-filled btn-lg btn-info btn-gopay">Оплатить сейчас</div>
+							<div data-fromview="photosession" class="apple-pay-button apple-pay-button_sm">
+								<span class="text">Оплатить с </span>
+								<span class="logo"></span>
+							</div>
+						</div>
+						<div class="ae-widget__pay-helpers-wrapper">
+							<div class="btn btn-lg btn-pay-cash">Оплатить позже</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ae-widget__content ae-widget__content-pay hide">
+				<div class="ae-widget__header clearfix">
+						<div class="ae-widget__profile-container">
+							<div class="avatar"><img src="/img/company_avatar/b/710.png?1536407364" onerror="this.src='/img/dummy_avatar.png'"/></div>
+							<div class="ae-widget__profile-nameblock">
+								<div class="ae-widget__profile-role">SNYATO.KZ</div>
+								<div class="ae-widget__profile-name">Оплата банковской картой</div>
+							</div>
+						</div>
+
+					<button type="button" class="close"><span><i class="icon icon-close-empty-big"></i></span></button>
+					<div class="ae-widget__payprice-block">
+						ИТОГО
+						<div class="ae-widget__payprice"></div>
+					</div>
+				</div>
+				
+				<div class="ae-widget__body clearfix">
+					<div id="ae-widget__content-pay-iframe" class="ae-widget__content-pay-iframe clearfix"></div>
+				</div>
+				<div class="ae-widget__actions clearfix">
+					<div class="btn btn-lg btn-default pull-left ae-widget__back">Отменить оплату</div>
+				</div>
+			</div>
+
+			<div class="ae-widget__content ae-widget__content-pay-week hide">
+				<div class="ae-widget__header clearfix">
+						<div class="ae-widget__profile-container">
+							<div class="avatar"><img src="/img/company_avatar/b/710.png?1536407364" onerror="this.src='/img/dummy_avatar.png'"/></div>
+							<div class="ae-widget__profile-nameblock">
+								<div class="ae-widget__profile-role">SNYATO.KZ</div>
+								<div class="ae-widget__profile-name">Оплата банковской картой</div>
+							</div>
+						</div>
+
+					<button type="button" class="close"><span><i class="icon icon-close-empty-big"></i></span></button>
+					<div class="ae-widget__payprice-block">
+						ИТОГО
+						<div class="ae-widget__payprice"></div>
+					</div>
+				</div>
+				
+				<div id="ae-widget__content-pay-week-iframe" class="ae-widget__content-pay-iframe clearfix"></div>
+				<div class="ae-widget__actions clearfix">
+					<div class="btn btn-lg btn-default pull-left ae-widget__back">Отменить оплату</div>
+				</div>
+			</div>
+
+			<div class="ae-widget__footer clearfix">
+				<span class="pull-left">Работает на технологии <a href="https://appevent.ru/studio?utm_source=widget&amp;utm_medium=widget&amp;utm_campaign=widget_footer&amp;from_widget_id=4271" target="_blank">www.appevent.ru</a></span>
+				<span class="pull-right">© 2023 AppEvent</span>
+			</div>
+		</div>
+
+
+			<div class="ae-widget__block-extrastore hide">
+				<div class="ae-widget__catalog-header">
+					<div class="align-items-center d-flex">
+						<h2 class="hidden-xs mb-0 mr-5 mt-0">Магазин</h2>
+						<div class="btn btn-default ae-widget__extrastore__back"><span class="visible-xs">Расписание</span><span class="hidden-xs">Вернуться в расписание</span></div>
+					</div>
+
+					<div class="d-flex_right"></div>
+
+					<div class="ae-widget__price-block hide">
+						<div class="ae-widget__price"></div>
+						включая скидку <span class="ae-widget__price-discount"></span>
+					</div>
+
+					<div class="ae-widget__catalog-header__cart ae-widget__extrastore-card__basket">
+						<div class="ae-widget__catalog-header__cart__icon">
+							<i class="icon icon-ios-cart"></i>
+							<div class="ae-widget__catalog-header__cart__count"></div>
+						</div>
+						<div class="ae-widget__catalog-header__cart__text">Корзина</div>
+					</div>
+				</div>
+
+				<div class="branch-container hide"></div>
+
+				<ul class="snippet-nav ae-widget__extrastore-menu clearfix" role="tablist"></ul>
+
+				<div class="ae-widget__block-extrastore_tabs mt-20"></div>
+			</div>
+
+			<div class="ae-widget__block-checkout-empty ae-widget__content_fullheight hide">
+				<div class="ae-widget__vcenter-container">
+					<div class="empty__block-txt">Корзина пуста</div>
+					<div class="btn btn-filled btn-lg btn-info ae-widget__checkout-empty__back">Перейти в каталог</div>
+				</div>
+			</div>
+
+			<div class="ae-widget__block-checkout-success ae-widget__content_fullheight hide">
+				<div class="ae-widget__finish-txt">
+					<h2>Ваш заказ принят!</h2>
+					<span class="ae-widget__finish-total hide">Сумма заказа <span class="price_total"></span></span>
+					<span class="ae-widget__finish-prepay hide">
+						<span class="prepay_with_decline">
+							Необходимо внести предоплату <span class="price_prepay"></span>
+							<br/>в течение' <span class="prepay_decline_duration"></span>!
+							<br/><strong>Иначе заказ будет отменен!</strong>
+						</span>
+						<span class="prepay_without_decline">
+							Необходимо внести предоплату <span class="price_prepay"></span>!
+						</span>
+					</span>
+					<br/>
+
+					<div class="ae-widget__finish-aboutlink ae-text-muted">Подробности заказа отправлены вам на почту.</div>
+					<span class="ae-widget__finish-aboutlink-pay ae-text-muted hide">Вы можете оплатить заказ по ссылке,<br/>отправленной вам на почту.</span>
+
+					<br/><br/><div class="btn btn-filled btn-lg btn-info ae-widget__checkout-success__back"></div>
+				</div>
+			</div>
+
+			<div class="ae-widget__block-checkout hide">
+				<div class="align-items-center d-flex mt-10 mb-15 branch-checkout-week">
+					<h2 class="mb-0 mr-5 mt-0">Оформление заказа</h2>
+					<div class="btn btn-default ae-widget__checkout__back">Назад</div>
+					<div class="branch-container-week"></div>
+				</div>
+
+				<div class="ui-alert ui-alert__info ui-alert_btn-right ae-widget__block-checkout__needsignup-alert hide">
+					<div class="ui-alert__desc">
+						<div class="ui-alert__h1">Не забудьте записаться на занятие</div>
+						<div class="ui-alert__h2">Если вы еще не записаны, сделайте это из расписания после покупки</div>
+					</div>
+				</div>
+
+				<div class="ui-alert ui-alert__info ui-alert_btn-right ae-widget__block-checkout__autosignup-alert hide">
+					<div class="ui-alert__desc">
+						<div class="ui-alert__h1">Вы будете записаны на занятие после оплаты</div>
+						<div class="ui-alert__h2"></div>
+					</div>
+					<div class="ui-alert__action">
+						<a href="#" class="btn btn-info ae-widget__block-checkout__autosignup-off">Отменить запись</a>
+					</div>
+				</div>
+
+				<h3 class="ae-widget__form-header">Состав заказа</h3>
+				<div class="ae-widget__content-basket ae-widget__content-basket-renter"></div>
+
+				<div class="clearfix">
+					<div class="ae-widget__price-block hide">
+						<div class="ae-widget__price"></div>
+						<div class="hide">включая скидку <span class="ae-widget__price-discount"></span></div>
+					</div>
+				</div>
+
+					<div class="ae-widget__form-contact">
+						<h3 class="ae-widget__form-header">Данные получателя</h3>
+
+						<div class="text-muted mb-15">Пожалуйста, указывайте реальные данные</div>
+
+						<div class="row">
+							<div class="form-group cols-xs-12 col-sm-4">
+								<input class="form-control" type="text" id="client_fio" autocomplete="off" name="client_fio" placeholder="Фамилия Имя" value="">
+								<span class="help-block"></span>
+							</div>
+							<div class="form-group cols-xs-12 col-sm-4">
+								<input class="form-control" type="text" id="client_email" autocomplete="off" name="client_email" placeholder="Email" value="">
+								<span class="help-block"></span>
+							</div>
+							<div class="form-group cols-xs-12 col-sm-4">
+								<input class="form-control pnumber_mask" type="text" id="client_pnumber" autocomplete="off" name="client_pnumber" placeholder="Телефон" value="">
+								<span class="help-block"></span>
+							</div>
+						</div>
+					</div>
+
+				<h3 class="ae-widget__form-header">Дополнительно</h3>
+				<div class="form-group ae-widget__comment">
+					<textarea class="form-control" autocomplete="off" name="description" placeholder="Комментарий"></textarea>
+					<span class="help-block"></span>
+				</div>
+
+				<div class="clearfix">
+					<div class="checkout-total-info checkout-total-info_fixed">
+						<div class="checkout-total-info__line checkout-total-info__origin-price">
+							<div>Товары</div>
+							<span class="checkout-total-info__price"></span>
+						</div>
+						<div class="checkout-total-info__line checkout-total-info__discount">
+							<div>Скидка на товары</div>
+							<span class="checkout-total-info__price"></span>
+						</div>
+						<div class="checkout-total-info__line checkout-total-info__delivery-price">
+							<div>Доставка курьером</div>
+							<span class="checkout-total-info__price"></span>
+						</div>
+						<div class="checkout-total-info__line checkout-total-info__summary">
+							<div>Итого к оплате</div>
+							<span class="checkout-total-info__price"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group text-right rules_confirm__checkblock">
+					Нажимая на кнопку, вы соглашаетесь с 
+					<a href="#" class="widget-show-rules" aepopup="policy">условиями использования</a>
+					<span class="help-block"></span>
+				</div>
+
+				<div class="form-group text-right">
+					<span class="help-block" name="orders"></span>
+				</div>
+
+				<div class="clearfix mb-20 ae-widget__block-checkout__actions">
+					<div>
+						<div class="mb-20 mt-15 text-left ui-alert ui-alert__danger">
+							<div class="ui-alert__icon"><i class="icon icon-warning-alt"></i></div>
+							<div class="ui-alert__desc">
+								<div class="ui-alert__h1">Для корректной оплаты отключите VPN-сервис!</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn btn-lg btn-disabled pull-right ae-widget__checkout__next"></div>
+					<div class="btn btn-lg pull-right ae-widget__checkout__back" style="margin-right: 10px;">Отменить</div>
+				</div>
+			</div>
+			<div class="ae-widget__block-applepay ae-widget__content_fullheight hide">
+				<div class="ae-widget__finish-txt">
+					<span class="ae-widget__finish-total hide">Сумма заказа <span class="price_total"></span></span>
+					<br/>
+					<div class="ae-widget__pay-wrapper">
+						<div class="ae-widget__pay-actions-wrapper">
+							<div class="btn btn-filled btn-lg btn-info btn-gopay-card">Оплатить картой</div>
+							<div data-fromview="applepay" class="apple-pay-button apple-pay-button_sm">
+								<span class="text">Оплатить с </span>
+								<span class="logo"></span>
+							</div>
+							<div class="btn btn-lg btn-applepay-back">Назад</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="ae-widget__block-pay-wait ae-widget__content_fullheight hide">
+				<div class="ae-widget__header clearfix">
+						<div class="ae-widget__profile-container">
+							<div class="avatar"><img src="/img/company_avatar/b/710.png?1536407364" onerror="this.src='/img/dummy_avatar.png'"/></div>
+							<div class="ae-widget__profile-nameblock">
+								<div class="ae-widget__profile-role">SNYATO.KZ</div>
+								<div class="ae-widget__profile-name">Оплата банковской картой</div>
+							</div>
+						</div>
+
+					<button type="button" class="close"><span><i class="icon icon-close-empty-big"></i></span></button>
+					<div class="ae-widget__payprice-block">
+						ИТОГО
+						<div class="ae-widget__payprice"></div>
+					</div>
+				</div>
+				
+				<div id="ae-widget__block-pay-wait-iframe" class="ae-widget__content-pay-iframe clearfix"></div>
+				<div class="ae-widget__actions clearfix">
+					<div class="btn btn-lg btn-default pull-left ae-widget__pay__back">Отменить оплату</div>
+				</div>
+			</div>
+
+			<div class="ae-widget__block-pay-success ae-widget__content_fullheight hide">
+				<div class="ae-widget__finish-txt">
+					<h2>Оплата прошла успешно!<span class="h-desc">Подробности заказа отправлены вам на почту.</span></h2>
+
+					<br/><div class="btn btn-filled btn-lg btn-info ae-widget__pay-success__back"></div>
+				</div>
+			</div>
+
+			<div class="ae-widget__block-applepay-status ae-widget__content_fullheight hide">
+				<div class="ae-widget__block-applepay-success ae-widget__content_fullheight hide">
+					<div class="ae-widget__finish-txt">
+						<h2>Оплата прошла успешно!<span class="h-desc">Подробности заказа отправлены вам на почту.</span></h2>
+	
+						<br/><div class="btn btn-filled btn-lg btn-info ae-widget__applepay-go-start">Сделать еще один заказ</div>
+					</div>
+				</div>
+				<div class="ae-widget__block-applepay-fail ae-widget__content_fullheight hide">
+					<div class="ae-widget__finish-txt">
+						<div>
+							<div class="d-inline-flex mb-20 text-left ui-alert ui-alert__danger">
+								<div class="ui-alert__icon"><i class="icon icon-warning-alt"></i></div>
+								<div class="ui-alert__desc">
+									<div class="ui-alert__h1">Произошла ошибка, попробуйте еще раз!</div>
+									<div class="ui-alert__h2 ae-widget__block-pay-failed__txt"></div>
+								</div>
+							</div>
+						</div>
+						<div class="btn btn-filled btn-lg btn-info ae-widget__applepay__repeat">Выбрать другой способ</div>
+					</div>
+				</div>
+			</div>
+			<div class="ae-widget__block-pay-failed ae-widget__content_fullheight hide">
+				<div class="ae-widget__finish-txt">
+					<div>
+						<div class="d-inline-flex mb-20 text-left ui-alert ui-alert__danger">
+							<div class="ui-alert__icon"><i class="icon icon-warning-alt"></i></div>
+							<div class="ui-alert__desc">
+								<div class="ui-alert__h1">Произошла ошибка, попробуйте еще раз!</div>
+								<div class="ui-alert__h2 ae-widget__block-pay-failed__txt"></div>
+							</div>
+						</div>
+					</div>
+					<div class="btn btn-filled btn-lg btn-info ae-widget__pay__repeat">Оплатить заказ</div>
+				</div>
+			</div>
+	</div>
+
+
+	
+
+<div id="ae-widget__confirm-city-change" class="modal fade modal_nobackdrop modal_noheader" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body clearfix">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon icon-close-empty"></i></span></button>
+				<h2 class="text-center">Вам показаны способы<br/>получения в <span></span></h2>
+
+				<div class="form-group">
+					<input type="hidden" name="city_id" value="">
+					<div class="ae-input-ajax">
+						<input type="text" class="auto_city form-control" id="city" autocomplete="off" name="city" placeholder="Укажите другой город" value="">
+						<div class="ae-input-ajax__loader"></div>
+					</div>
+					<span class="help-block"></span>
+				</div>
+
+				<button class="btn btn-lg btn-block btn-filled btn-info btn-spined ae-widget__confirm-city-save">Продолжить с новым городом</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ae-widget__content-popup_policy" class="modal fade modal_nobackdrop modal_noheader ae-widget__content-popup" aepopup="policy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body clearfix">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon icon-close-empty"></i></span></button>
+				<h4>Пользовательское соглашение</h4>
+С пользовательским соглашением можно ознакомиться по адресу https://appevent.ru/docs/o/agreement.pdf
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ae-widget__lesson-detail" class="modal fade modal_nobackdrop modal_noheader" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+	<form class="" action="" method="post" enctype="multipart/form-data">
+		<div class="modal-content">
+			<div class="modal-body clearfix">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon icon-close-empty"></i></span></button>
+				<h3 class="ae-widget__lesson-modal-title" id="myModalLabel"></h3>
+				<div class="ae-widget__lesson-modal-hall mb-20"></div>
+
+				<div class="mb-20">
+					<div class="ae-widget__lesson-modal-duration clearfix">
+						<i class="icon icon-time"></i> <span></span>
+					</div>
+					<div class="ae-widget__lesson-modal-share clearfix">
+						<i class="icon icon-user-circle"></i> <span></span>
+					</div>
+				</div>
+
+				<div class="ae-widget__lesson-modal-closedsignup alert alert-info mb-0 hide">
+					<h2 class="text-center" style="margin: 0px">Запись закрыта</h2>
+				</div>
+
+				<div class="ae-widget__lesson-modal-already_signed alert alert-info mb-0 hide">
+					<h2 class="text-center" style="margin: 0px">Вы уже записаны</h2>
+				</div>
+
+				<div class="ae-widget__lesson-modal-signup-success ui-alert ui-alert__success hide">
+					<div class="ui-alert__desc">
+						<div class="ui-alert__h1">Вы успешно записались на занятие!</div>
+					</div>
+				</div>
+
+				<div class="ae-widget__lesson-modal-join-stream mt-10">
+					<a href="#" target="_blank" class="ae-widget__lesson-modal-join-stream__href btn btn-filled btn-info btn-block btn-lg mb-10">
+						Присоединиться Online
+					</a>
+					<div class="ui-alert ui-alert__gray mb-10">
+						<div class="ui-alert__desc">
+							<div class="ui-alert__h2 ae-widget__lesson-modal-join-stream__id"><strong>Идентификатор конференции:</strong> <span></span></div>
+							<div class="ui-alert__h2 mt-5 ae-widget__lesson-modal-join-stream__password"><strong>Пароль:</strong> <span></span></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="ae-widget__lesson-modal-form-block">
+					<h4 class="ae-widget__form-header">ЗАПИШИТЕСЬ НА ЗАНЯТИЕ<div class="ae-widget__lesson-modal-capacity pull-right-sm"></div></h4>
+					<div class="ae-widget__lesson-modal-no-service hide">
+						<div class="ui-alert ui-alert__info ui-alert_btn-right">
+							<div class="ui-alert__desc">
+								<div class="ui-alert__h1">У вас нет нужной услуги</div>
+								<div class="ui-alert__h2 ae-widget__lesson-modal-no-service__payactive hide">Вы можете купить ее прямо сейчас</div>
+								<div class="ui-alert__h2 ae-widget__lesson-modal-no-service__notpayactive hide">Обратитесь к администратору или менеджеру</div>
+							</div>
+							<div class="ui-alert__action hide">
+								<a href="#" class="btn btn-filled btn-info ae-widget__lesson-modal__goshop">Перейти в магазин</a>
+							</div>
+						</div>
+						<div class="ae-widget__lesson-modal-baseservice mt-10 clearfix">
+							<div class="pull-right-sm"><span>Стоимость занятия</span> <strong class="ae-widget__lesson-modal-baseservice__price"></strong></div>
+						</div>
+					</div>
+					<div class="ae-widget__lesson-modal-form">
+						<div class="ae-widget__form-contact">
+							<div class="row">
+								<div class="form-group col-sm-4">
+									<input class="form-control" type="text" id="client_fio" autocomplete="off" name="client_fio" placeholder="Фамилия Имя" value="">
+									<span class="help-block"></span>
+								</div>
+								<div class="form-group col-sm-4">
+									<input class="form-control" type="text" id="client_email" autocomplete="off" name="client_email" placeholder="Email" value="">
+									<span class="help-block"></span>
+								</div>
+								<div class="form-group col-sm-4">
+									<input class="form-control pnumber_mask" type="text" id="client_pnumber" autocomplete="off" name="client_pnumber" placeholder="Телефон" data-mask="+7(000)000-00-00" value="">
+									<span class="help-block"></span>
+								</div>
+							</div>
+						</div>
+						<div class="ae-widget__lesson-modal-baseservice mb-10 clearfix">
+							<div class="pull-right-sm"><span>Стоимость занятия</span> <strong class="ae-widget__lesson-modal-baseservice__price"></strong></div>
+						</div>
+
+						<div class="ae-widget__lesson-modal-services-warning hide ui-alert ui-alert__warning mb-10">
+							<div class="ui-alert__icon"><i class="icon icon-warning-alt"></i></div>
+							<div class="ui-alert__desc">
+								<div class="ui-alert__h2">Вы уже записаны на занятия оставшиеся в абонементе. Для дальнейшей записи купите новый абонемент или отмените запись на другие занятия</div>
+							</div>
+							<div class="ui-alert__action hide">
+								<a href="#" class="btn btn-filled btn-info ae-widget__lesson-modal__goshop">Продлить</a>
+							</div>
+						</div>
+					
+						<div class="ae-widget__lesson-modal-service ui-alert ui-alert__gray mb-10">
+							<div class="ui-alert__desc">
+								<div class="ui-alert__h1 mb-10">Услуга к списанию</div>
+								<div class="ae-widget__lesson-modal-service__service"></div>
+							</div>
+						</div>
+						<div class="clearfix mb-5">
+							<button type="submit" class="btn btn-filled btn-info btn-lg btn-block btn-signup">Записаться</button>
+						</div>
+						<div class="text-center text-muted">
+							Нажимая на кнопку, вы соглашаетесь с 
+							<a href="#" class="widget-show-rules" aepopup="policy">условиями использования</a>
+						</div>
+					</div>
+					<div class="ae-widget__lesson-modal-form-auth">
+						<div class="mb-10">Для записи на занятие необходимо авторизоваться</div>
+						<div class="clearfix">
+							<div class="btn btn-filled btn-info ae-widget__modal-btn-nocheck btn-lg btn-block ae-widget__lesson-modal__signin">Войти</div>
+						</div>
+						<div class="ae-widget__lesson-modal-baseservice mt-10 clearfix">
+							<div class="pull-right-sm"><span>Стоимость занятия</span> <strong class="ae-widget__lesson-modal-baseservice__price"></strong></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<ul class="snippet-nav snippet-nav_modal-inline hide clearfix" role="tablist">
+				<li class="snippet-nav__item"><a class="snippet-nav__link" href="#lesson-about-tab" aria-controls="lesson-about-tab" role="tab" data-toggle="tab">
+					Занятие
+				</a></li>
+				<li class="snippet-nav__item"><a class="snippet-nav__link" href="#lesson-trainer-tab" aria-controls="lesson-trainer-tab" role="tab" data-toggle="tab">
+					Тренер
+				</a></li>
+			</ul>
+			<div class="tab-content snippet-nav__content_modal-inline hide">
+				<div role="tabpanel" class="tab-pane" id="lesson-about-tab"></div>
+				<div role="tabpanel" class="tab-pane" id="lesson-trainer-tab">
+					<div>
+						<div class="snippet-user snippet-user_lg mb-15">
+							<div class="avatar"><img src="" onerror="this.src='/img/dummy_avatar.png'"/></div>
+							<div class="snippet-user__info">
+								<div class="snippet-user__name lesson-trainer-tab__firstname"></div>
+								<div class="snippet-user__name lesson-trainer-tab__lastname"></div>
+							</div>
+						</div>
+					</div>
+					<div class="lesson-trainer-tab__content">
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	</div>
+</div>
+
+<div id="ae-widget__private-detail" class="modal fade modal_nobackdrop modal_noheader" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+	<form class="" action="" method="post" enctype="multipart/form-data">
+		<div class="modal-content">
+			<div class="modal-body clearfix">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon icon-close-empty"></i></span></button>
+				<h3 class="ae-widget__private-modal-title" id="myModalLabel"></h3>
+				<div class="ae-widget__private-modal-date mb-20"></div>
+
+				<div class="ae-widget__lesson-modal-signup-success ui-alert ui-alert__success hide">
+					<div class="ui-alert__desc">
+						<div class="ui-alert__h1">Вы успешно записались на занятие!</div>
+					</div>
+				</div>
+				
+				<div class="ae-widget__lesson-modal-form-block">
+					<div class="mb-20">
+						<div class="">
+							<h4>Тренер проводит следующие занятия</h4>
+							<div class="form-group">
+								<div class="input-group">
+									<select name="lesson_id" class="form-control"></select>
+								</div>
+								<span class="help-block"></span>
+							</div>
+						</div>
+					</div>
+
+					<h4 class="ae-widget__form-header">ЗАПИШИТЕСЬ НА ЗАНЯТИЕ</h4>
+					<div class="ae-widget__lesson-modal-no-service ui-alert ui-alert__info ui-alert_btn-right mb-10 hide">
+						<div class="ui-alert__desc">
+							<div class="ui-alert__h1">У вас нет нужной услуги</div>
+							<div class="ui-alert__h2 ae-widget__lesson-modal-no-service__payactive hide">Вы можете купить ее прямо сейчас</div>
+							<div class="ui-alert__h2 ae-widget__lesson-modal-no-service__notpayactive hide">Обратитесь к администратору или менеджеру</div>
+						</div>
+						<div class="ui-alert__action hide">
+							<a href="#" class="btn btn-filled btn-info ae-widget__lesson-modal__goshop">Перейти в магазин</a>
+						</div>
+					</div>
+					<div class="ae-widget__lesson-modal-form">
+						<div class="ae-widget__form-contact">
+							<div class="row">
+								<div class="form-group col-sm-4">
+									<input class="form-control" type="text" id="client_fio" autocomplete="off" name="client_fio" placeholder="Фамилия Имя" value="">
+									<span class="help-block"></span>
+								</div>
+								<div class="form-group col-sm-4">
+									<input class="form-control" type="text" id="client_email" autocomplete="off" name="client_email" placeholder="Email" value="">
+									<span class="help-block"></span>
+								</div>
+								<div class="form-group col-sm-4">
+									<input class="form-control pnumber_mask" type="text" id="client_pnumber" autocomplete="off" name="client_pnumber" placeholder="Телефон" data-mask="+7(000)000-00-00" value="">
+									<span class="help-block"></span>
+								</div>
+							</div>
+
+							<div class="ae-widget__lesson-modal-services-warning hide ui-alert ui-alert__warning mb-10">
+								<div class="ui-alert__icon"><i class="icon icon-warning-alt"></i></div>
+								<div class="ui-alert__desc">
+									<div class="ui-alert__h2">Вы уже записаны на занятия оставшиеся в абонементе. Для дальнейшей записи купите новый абонемент или отмените запись на другие занятия</div>
+								</div>
+								<div class="ui-alert__action hide">
+								<a href="#" class="btn btn-filled btn-info ae-widget__lesson-modal__goshop">Продлить</a>
+							</div>
+							</div>
+							
+							<div class="ae-widget__lesson-modal-service ui-alert ui-alert__gray mb-10">
+								<div class="ui-alert__desc">
+									<div class="ui-alert__h1 mb-10">Услуга к списанию</div>
+									<div class="ae-widget__lesson-modal-service__service"></div>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix mb-5">
+							<button type="submit" class="btn btn-filled btn-info btn-lg btn-block btn-signup">Записаться</button>
+						</div>
+						<div class="text-center text-muted">
+							Нажимая на кнопку, вы соглашаетесь с 
+							<a href="#" class="widget-show-rules" aepopup="policy">условиями использования</a>
+						</div>
+					</div>
+					<div class="ae-widget__lesson-modal-form-auth">
+						<div class="mb-10">Для записи на занятие необходимо авторизоваться</div>
+						<div class="clearfix">
+							<div class="btn btn-filled btn-info btn-lg btn-block ae-widget__modal-btn-nocheck ae-widget__lesson-modal__signin">Войти</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	</div>
+</div>
+
+<div id="choose_catalog_group" class="modal fade modal_nobackdrop modal_noheader" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body clearfix">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon icon-close-empty"></i></span></button>
+				<h3>Выберите категорию</h3>
+
+				<div class="snippet-catalog-group-list clearfix">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ae-widget__auth-signin" class="modal fade modal_nobackdrop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon icon-close-outline"></i></span></button>
+				<h3 class="modal-title" id="myModalLabel">Личный кабинет</h3>
+			</div>
+			<div class="modal-body clearfix">
+				<form id="ae-widget-loginForm" class="full-width" method="post" action="">
+					<div class="form-group">
+						<input class="form-control" type="text" name="email" value="" placeholder="Email"/>
+						<span class="help-block"></span>
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="password" name="password" value="" placeholder="Пароль"/>
+						<span class="help-block"></span>
+					</div>
+					<div class="form-group">
+						<input class="btn btn-lg btn-info btn-filled btn-block" type="submit" name="submit" value="Войти"/>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<a href="#" class="btn btn-lg btn-default btn-block ae-widget__forgot">Забыл пароль</a>
+						</div>
+						<div class="form-group col-sm-6 mb-0">
+							<a href="#" data-toggle="modal" class="btn btn-lg btn-default btn-block ae-widget__signup">Регистрация</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ae-widget__auth-forgot" class="modal fade modal_nobackdrop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon icon-close-outline"></i></span></button>
+				<h3 class="modal-title" id="myModalLabel">Личный кабинет</h3>
+			</div>
+			<div class="modal-body clearfix">
+				<form id="ae-widget-loginForm" class="full-width" method="post" action="">
+					<div class="form-group">
+						<input class="form-control" type="text" name="email" value="" placeholder="Email"/>
+						<span class="help-block"></span>
+					</div>
+					<div class="form-group">
+						<input class="btn btn-lg btn-info btn-filled btn-block" type="submit" name="submit" value="Восстановить"/>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<a href="#" class="btn btn-lg btn-default btn-block ae-widget__signin">Войти</a>
+						</div>
+						<div class="form-group col-sm-6 mb-0">
+							<a href="#" data-toggle="modal" class="btn btn-lg btn-default btn-block ae-widget__signup">Регистрация</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ae-widget__auth-forgotTrue" class="modal fade modal_nobackdrop modal_noheader" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body clearfix">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon icon-close-empty"></i></span></button>
+
+				<h4>На указанный электронный ящик выслана информация по восстановлению пароля.</h4>
+				<div class="form-group">
+					<a href="#" class="btn btn-lg btn-default btn-block ae-widget__signin">Войти</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ae-widget__auth-signup" class="modal fade modal_nobackdrop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon icon-close-outline"></i></span></button>
+				<h3 class="modal-title" id="myModalLabel">Личный кабинет</h3>
+			</div>
+			<div class="modal-body clearfix">
+				<form id="ae-widget-loginForm" class="full-width" method="post" action="">
+					<div class="form-group">
+						<input class="form-control" type="text" name="fio" value="" placeholder="Фамилия Имя"/>
+						<span class="help-block"></span>
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" name="email" value="" placeholder="Email"/>
+						<span class="help-block"></span>
+					</div>
+					<div class="form-group">
+						<input class="form-control pnumber_mask" type="text" name="pnumber" value="" placeholder="Телефон"/>
+						<span class="help-block"></span>
+					</div>
+					<div class="form-group">
+						<input class="btn btn-lg btn-info btn-filled btn-block" type="submit" name="submit" value="Зарегистрироваться"/>
+					</div>
+					<div class="text-muted mb-15">
+						Нажимая кнопку «Зарегистрироваться», вы соглашаетесь с <a href="#" class="widget-show-rules" aepopup="policy">условиями</a>.
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<a href="#" class="btn btn-lg btn-default btn-block ae-widget__forgot">Забыл пароль</a>
+						</div>
+						<div class="form-group col-sm-6 mb-0">
+							<a href="#" data-toggle="modal" class="btn btn-lg btn-default btn-block ae-widget__signin">Войти</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ae-widget__auth-sms-signin" class="modal modal_small fade modal_nobackdrop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon icon-close-outline"></i></span></button>
+				<h3 class="modal-title" id="myModalLabel">Личный кабинет</h3>
+			</div>
+			<div class="modal-body clearfix">
+				<form id="ae-widget-loginForm" class="full-width" method="post" action="">
+					<div class="form-group">
+						<label for="name">Введите номер телефона</label>
+						<input class="form-control pnumber_mask" type="text" name="pnumber" value="" placeholder="Телефон"/>
+						<span class="help-block"></span>
+					</div>
+					<div class="form-group mb-0">
+						<input class="btn btn-lg btn-info btn-filled btn-block" type="submit" name="submit" value="Войти"/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ae-widget__auth-sms-signin_confirm" class="modal modal_small fade modal_nobackdrop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon icon-close-outline"></i></span></button>
+				<h3 class="modal-title" id="myModalLabel">Личный кабинет</h3>
+			</div>
+			<div class="modal-body text-center clearfix">
+				<div class="mb-10 text-muted">
+					<div class="ae-widget__auth__pnumber__new hide">Введите код подтверждения<br/>отправленный на номер <span class="ae-widget__content-pnumber"></span></div>
+					<div class="ae-widget__auth__pnumber__old hide">Введите ранее<br/>полученный SMS код</div>
+				</div>
+
+				<form id="ae-widget-loginForm" class="full-width" method="post" action="">
+					<div class="form-group">
+						<input class="form-control" type="text" id="code" autocomplete="off" name="code" placeholder="Код из SMS" value=""/>
+						<span class="help-block"></span>
+					</div>
+					<div class="ae-widget__pnumber-confirm-action ae-widget__auth__pnumber-resend">ОТПРАВИТЬ ЕЩЕ РАЗ</div>
+					<div class="ae-widget__pnumber-blocked text-muted hide">Запросить код повторно можно через <span class="ae-widget__pnumber-blocked-timer">60</span> сек.</div>
+					<div class="ae-widget__pnumber-confirm-action ae-widget__auth__pnumber-change">ИЗМЕНИТЬ НОМЕР</div>
+
+					<div class="form-group mb-0">
+						<input class="btn btn-lg btn-info btn-filled btn-block" type="submit" name="submit" value="Войти"/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ae-widget__auth-sms-signin_data" class="modal modal_small fade modal_nobackdrop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon icon-close-outline"></i></span></button>
+				<h3 class="modal-title" id="myModalLabel">Личный кабинет</h3>
+			</div>
+			<div class="modal-body clearfix">
+				<form id="ae-widget-loginForm" class="full-width" method="post" action="">
+					<div class="form-group">
+						<label for="name">Фамилия Имя</label>
+						<input class="form-control" type="text" name="fio" value="" placeholder="Фамилия Имя"/>
+						<span class="help-block"></span>
+					</div>
+					<div class="form-group mb-0">
+						<input class="btn btn-lg btn-info btn-filled btn-block" type="submit" name="submit" value="Войти"/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ae-widget__cancel-visit" class="modal modal_small fade modal_nobackdrop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon icon-close-outline"></i></span></button>
+				<h3 class="modal-title" id="myModalLabel">
+					<span class="ae-widget__cancel-visit_desc-lesson"></span>, <span class="ae-widget__cancel-visit_desc-time"></span>
+				</h3>
+			</div>
+			<div class="modal-body clearfix">
+				<form id="ae-widget-CanceVisitForm" class="full-width" method="post" action="">
+					<div class="ae-widget__cancel-visit_desc-onlyadmin hide">
+						<div class="alert alert-danger">К сожалению данную запись можно отменить только через администратора</div>
+							<div class="text-center">
+								<div>Контактная информация:</div>
+
+									<a href="tel:+79037239987">+7 (903) 723-99-87</a>
+							</div>
+					</div>
+					<div class="ae-widget__cancel-visit_desc-can mt-0 alert alert-warning hide">Вы действительно хотите отменить запись?</div>
+					<div class="form-group mb-0 ae-widget__cancel-visit-submit">
+						<input class="btn btn-lg btn-info btn-filled btn-block" type="submit" name="submit" value="Отменить запись"/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74593304-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		    (function (d, w, c) {
+		        (w[c] = w[c] || []).push(function() {
+		            try {
+		                w.yaCounter35794895 = new Ya.Metrika({
+		                    id:35794895,
+		                    clickmap:true,
+		                    trackLinks:true,
+		                    accurateTrackBounce:true,
+		                    webvisor:true
+		                });
+		            } catch(e) { }
+		        });
+
+		        var n = d.getElementsByTagName("script")[0],
+		            s = d.createElement("script"),
+		            f = function () { n.parentNode.insertBefore(s, n); };
+		        s.type = "text/javascript";
+		        s.async = true;
+		        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+		        if (w.opera == "[object Opera]") {
+		            d.addEventListener("DOMContentLoaded", f, false);
+		        } else { f(); }
+		    })(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/35794895" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+
+
+
+
+</body>
+</html>
